@@ -59,21 +59,21 @@ export class Rectangle implements Figure {
 
   constructor(
     public color: Color,
-    public a: number,
-    public b: number,
+    public height: number,
+    public width: number,
   ) {
-    if (a <= 0 || b <= 0) {
+    if (height <= 0 || width <= 0) {
       throw new Error('Rectangle sides must be > 0');
     }
   }
 
   getArea(): number {
-    const area = this.a * this.b;
+    const area = this.height * this.width;
 
     return Math.floor(area * 100) / 100;
   }
 }
 
-export function getInfo(figure): string {
+export function getInfo(figure: Figure): string {
   return `A ${figure.color} ${figure.shape} - ${figure.getArea()}`;
 }
