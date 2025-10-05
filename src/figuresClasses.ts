@@ -59,8 +59,8 @@ export class Rectangle implements Figure {
 
   constructor(
     public color: Color,
-    public height: number,
     public width: number,
+    public height: number,
   ) {
     if (height <= 0 || width <= 0) {
       throw new Error('Rectangle sides must be > 0');
